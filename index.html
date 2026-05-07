@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- HTML meta: UTF-8 supports normal English text and symbols correctly. -->
+  <meta charset="UTF-8">
+
+  <!-- HTML meta: viewport makes the website responsive on mobile, tablet and desktop. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO title: appears in the browser tab and search results. -->
+  <title>PlayTogether Hub | Inclusive Play Activities</title>
+
+  <!-- SEO description: explains the page purpose to search engines and users. -->
+  <meta name="description" content="Inclusive activity resources for schools, playgrounds, parents, caregivers and professionals.">
+
+  <!-- Favicon: local SVG icon stored in assets/icons so the browser tab has a brand icon. -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Nunito gives a friendly child-focused feel; Atkinson Hyperlegible improves readability/accessibility. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS v5.3.3: gives responsive grid, navbar, cards, buttons, forms and modal styling. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons: used for social icons, service icons and small visual labels. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS: local styling that changes colours, fonts, card hover, hero design and accessibility. -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessibility link: keyboard users can skip repeated navigation and go directly to main content. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Bootstrap Navbar:
+       navbar = creates navigation component.
+       navbar-expand-lg = shows full menu on large screens; collapses on smaller screens.
+       sticky-top = keeps navbar visible at the top while scrolling.
+       bg-white and border-bottom = clean readable top bar.
+  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+      <!-- Brand link: returns user to homepage. -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html" aria-label="PlayTogether Hub homepage">
+        <span class="brand-mark">PT</span>
+        <span>PlayTogether Hub</span>
+      </a>
+
+      <!-- Bootstrap mobile button:
+           navbar-toggler = hamburger button.
+           data-bs-toggle and data-bs-target connect the button to the menu below.
+      -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Bootstrap collapsible menu:
+           collapse navbar-collapse = hides/shows menu on mobile.
+           id must match data-bs-target above.
+      -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <!-- Three page structure requested by user: Home, Activities, About + Training + Safeguarding. -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-training.html">About</a></li>
+
+          <!-- CTA button: clear action path to contact section on page 3. -->
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary rounded-pill px-4" href="about-training.html#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main landmark: helps screen readers identify the main content. -->
+  <main id="main">
+    <!-- Hero section:
+         Bootstrap row/col creates a two-column responsive layout.
+         On mobile the columns stack automatically.
+    -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <!-- Eyebrow label: small high-contrast text to explain the core offer quickly. -->
+            <span class="eyebrow"><i class="bi bi-stars"></i> Sustainable inclusive play platform</span>
+
+            <!-- Main H1: explains the website in one direct sentence. -->
+            <h1 class="display-4 fw-bold mt-3">Activities that help every child join, play and feel safe.</h1>
+
+            <p class="lead mt-3">
+              PlayTogether Hub offers practical activity cards, training material and safeguarding prompts for
+              schools, managed playgrounds, parents, caregivers and professionals supporting children aged 4–12.
+            </p>
+
+            <!-- CTA buttons: direct the user to the two main journeys. -->
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a class="btn btn-primary btn-lg rounded-pill" href="activities.html">Explore Activities</a>
+              <a class="btn btn-outline-dark btn-lg rounded-pill" href="about-training.html#contact">Contact Us</a>
+            </div>
+
+            <!-- Trust row: quick benefits using Bootstrap Icons. -->
+            <div class="trust-row mt-4">
+              <span><i class="bi bi-shield-check"></i> Safeguarding-first</span>
+              <span><i class="bi bi-universal-access"></i> SEND-aware</span>
+              <span><i class="bi bi-chat-dots"></i> Speech not required</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <!-- Local SVG image: avoids broken external image links and represents diverse children playing. -->
+            <img src="assets/images/hero-diverse-play.svg" class="img-fluid rounded-5 shadow-lg"
+              alt="Illustration of diverse children playing together in an inclusive activity">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facts section: quick proof-style overview. -->
+    <section class="py-5 bg-happy">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md-3"><div class="fact-card"><strong>4–12</strong><span>Age range</span></div></div>
+          <div class="col-md-3"><div class="fact-card"><strong>10–35</strong><span>Minute games</span></div></div>
+          <div class="col-md-3"><div class="fact-card"><strong>2–12</strong><span>Group size</span></div></div>
+          <div class="col-md-3"><div class="fact-card"><strong>3</strong><span>User groups: schools, homes, playgrounds</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services overview: from acceptance criteria, using responsive Bootstrap cards. -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What users get</span>
+          <h2>Resources for sustainable inclusive activities</h2>
+          <p>
+            The platform is designed for any school, playground or professional setting that wants
+            repeatable, safe and inclusive play activities.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Bootstrap grid: col-md-6 gives two columns on tablets; col-lg-3 gives four columns on desktop. -->
+          <div class="col-md-6 col-lg-3">
+            <article class="feature-card">
+              <i class="bi bi-card-checklist"></i>
+              <h3>Activity Cards</h3>
+              <p>Step-by-step cards with time, headcount, sensory risks, non-verbal options and safeguarding notes.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="feature-card">
+              <i class="bi bi-mortarboard"></i>
+              <h3>Training Material</h3>
+              <p>Short professional modules for staff, parents, caregivers and playground facilitators.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="feature-card">
+              <i class="bi bi-shield-heart"></i>
+              <h3>Safeguarding Layer</h3>
+              <p>Adult prompts covering distress, anxiety, sensory overload, peer pressure and safe stopping points.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <article class="feature-card">
+              <i class="bi bi-tree"></i>
+              <h3>Sustainable Theme</h3>
+              <p>Reusable activities for classrooms, playgrounds, clubs, family support and community inclusion.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured activities: JavaScript fills this area using the same activity data as the activities page. -->
+    <section class="py-5 bg-happy">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Quick preview</span>
+          <h2>Featured activity cards</h2>
+          <p>Cards are generated by JavaScript so the library can be scaled later as a SaaS product.</p>
+        </div>
+
+        <!-- JS hook: main.js inserts three featured cards here. -->
+        <div class="row g-4" id="homeActivityCards"></div>
+
+        <div class="text-center mt-4">
+          <a class="btn btn-primary rounded-pill px-4" href="activities.html">See all activities</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials: required by acceptance criteria; written as MVP sample testimonials. -->
+    <section class="py-5">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Trust signals</span>
+          <h2>Sample user feedback for the MVP</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="avatar avatar-one">TA</div>
+              <p>“The activity structure helped our quieter children join without being pushed to speak.”</p>
+              <h3>Teaching Assistant</h3>
+              <span>Primary school support</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="avatar avatar-two">PC</div>
+              <p>“The safeguarding reminders made it easier to know when to pause and reduce pressure.”</p>
+              <h3>Parent & Caregiver</h3>
+              <span>Home activity support</span>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="testimonial-card">
+              <div class="avatar avatar-three">YW</div>
+              <p>“The group-size and sensory notes are exactly what playground staff need before starting.”</p>
+              <h3>Youth Worker</h3>
+              <span>Managed playground setting</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA: final homepage action. -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-panel">
+          <div>
+            <h2>Ready to use inclusive activities in your setting?</h2>
+            <p>Explore cards, review safeguarding, then contact PlayTogether Hub for training or implementation support.</p>
+          </div>
+          <a class="btn btn-light btn-lg rounded-pill" href="about-training.html#contact">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: repeated across all three pages for trust, social links and newsletter. -->
+  <footer class="site-footer mt-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Business summary block. -->
+        <div class="col-lg-4">
+          <h2 class="h5 text-white">PlayTogether Hub</h2>
+          <p class="footer-text">
+            A sustainable activity resource platform for schools, playgrounds, parents,
+            caregivers and professionals supporting children aged 4–12.
+          </p>
+          <p class="footer-text mb-0">
+            Phone: <a href="tel:+447776200064">+44 77762 00064</a>
+          </p>
+        </div>
+
+        <!-- Quick page links: only three pages as requested. -->
+        <div class="col-lg-2 col-md-4">
+          <h3 class="h6 text-white">Pages</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="about-training.html">About & Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter form: a could-have feature from the acceptance criteria. -->
+        <div class="col-lg-3 col-md-4">
+          <h3 class="h6 text-white">Newsletter</h3>
+          <form id="newsletterForm" class="newsletter-form">
+            <!-- form-control is Bootstrap styling for readable inputs. -->
+            <input class="form-control mb-2" type="text" placeholder="Your name" aria-label="Your name" required>
+            <input class="form-control mb-2" type="email" placeholder="Email address" aria-label="Email address" required>
+            <button class="btn btn-sunshine w-100" type="submit">Sign up</button>
+            <p id="newsletterMsg" class="small mt-2 mb-0 d-none">Thank you — you are signed up.</p>
+          </form>
+        </div>
+
+        <!-- Social media links: target blank opens in a new tab as required. -->
+        <div class="col-lg-3 col-md-4">
+          <h3 class="h6 text-white">Social</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+          <p class="footer-text small mt-3">© 2026 PlayTogether Hub. Educational MVP front-end project.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle:
+       Required for navbar hamburger and modal popups.
+       Bundle includes Popper, so no extra Popper script is needed.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript: renders activity cards, modals, filters and form messages. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

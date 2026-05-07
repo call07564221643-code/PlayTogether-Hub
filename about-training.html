@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- HTML meta: UTF-8 supports normal English text and symbols correctly. -->
+  <meta charset="UTF-8">
+
+  <!-- HTML meta: viewport makes the website responsive on mobile, tablet and desktop. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO title: appears in the browser tab and search results. -->
+  <title>About | PlayTogether Hub</title>
+
+  <!-- SEO description: explains the page purpose to search engines and users. -->
+  <meta name="description" content="About PlayTogether Hub, training resources, safeguarding guidance and contact details.">
+
+  <!-- Favicon: local SVG icon stored in assets/icons so the browser tab has a brand icon. -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts: Nunito gives a friendly child-focused feel; Atkinson Hyperlegible improves readability/accessibility. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS v5.3.3: gives responsive grid, navbar, cards, buttons, forms and modal styling. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons: used for social icons, service icons and small visual labels. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS: local styling that changes colours, fonts, card hover, hero design and accessibility. -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Accessibility link: keyboard users can skip repeated navigation and go directly to main content. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Bootstrap Navbar:
+       navbar = creates navigation component.
+       navbar-expand-lg = shows full menu on large screens; collapses on smaller screens.
+       sticky-top = keeps navbar visible at the top while scrolling.
+       bg-white and border-bottom = clean readable top bar.
+  -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+      <!-- Brand link: returns user to homepage. -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html" aria-label="PlayTogether Hub homepage">
+        <span class="brand-mark">PT</span>
+        <span>PlayTogether Hub</span>
+      </a>
+
+      <!-- Bootstrap mobile button:
+           navbar-toggler = hamburger button.
+           data-bs-toggle and data-bs-target connect the button to the menu below.
+      -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Bootstrap collapsible menu:
+           collapse navbar-collapse = hides/shows menu on mobile.
+           id must match data-bs-target above.
+      -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <!-- Three page structure requested by user: Home, Activities, About + Training + Safeguarding. -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-training.html">About</a></li>
+
+          <!-- CTA button: clear action path to contact section on page 3. -->
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary rounded-pill px-4" href="about-training.html#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- About hero: combines about, safeguarding and training in one page as requested. -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow"><i class="bi bi-shield-heart"></i> About</span>
+            <h1>A sustainable activity platform for safer inclusive play.</h1>
+            <p>
+              PlayTogether Hub supports schools, managed playgrounds, professionals, parents and caregivers
+              with practical resources for children aged 4–12 from different ethnicities, backgrounds,
+              disabilities, autism spectrum profiles and communication needs.
+            </p>
+            <p class="mb-0">
+              Business phone: <a href="tel:+447776200064" class="fw-bold">+44 77762 00064</a>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/training-safeguarding.svg" class="img-fluid rounded-5 shadow-lg"
+              alt="Illustration of adults learning safeguarding and inclusive activity guidance">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About business section. -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <article class="info-card">
+              <h2>Business purpose</h2>
+              <p>
+                The platform offers sustainable themed activities and resources for schools, playgrounds
+                managed by professionals, and any setting that wants structured inclusive play.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="info-card">
+              <h2>Who it helps</h2>
+              <p>
+                Professionals, parents and caregivers supporting children who may be autistic, disabled,
+                anxious, multilingual, delayed in communication or at risk of exclusion.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="info-card">
+              <h2>Core promise</h2>
+              <p>
+                Children should gain confidence, enjoy stress-free play, communicate in different ways
+                and avoid being excluded from group activities.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training section: professional material overview. -->
+    <section class="py-5 bg-happy" id="training">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Training material</span>
+          <h2>Short modules for professionals, parents and caregivers</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 01</span>
+              <h3>Behaviour as Communication</h3>
+              <p>Recognise distress, freezing, masking, withdrawal and avoidance before labelling behaviour as defiance.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 02</span>
+              <h3>Autism & Sensory Needs</h3>
+              <p>Plan for sound, light, smell, texture, transitions, instructions, safe exits and calm regulation spaces.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 03</span>
+              <h3>Cultural Inclusion</h3>
+              <p>Support children from different ethnicities, languages and backgrounds without embarrassment or tokenism.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 04</span>
+              <h3>Non-Verbal Participation</h3>
+              <p>Use cards, gestures, objects, drawing, pointing and role choice so speech is not the only route.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 05</span>
+              <h3>Safeguarding in Play</h3>
+              <p>Identify peer pressure, humiliation, unsafe dynamics, adult boundaries and when to stop an activity.</p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="module-card">
+              <span>Module 06</span>
+              <h3>Adult Scripts</h3>
+              <p>Use calm language such as “You can pass”, “Show me another way”, and “Let’s make it smaller”.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Safeguarding section: key requirement from user. -->
+    <section class="py-5" id="safeguarding">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Safeguarding</span>
+          <h2>Safeguarding must be visible before, during and after play</h2>
+          <p>
+            This project is educational and should be aligned with the setting’s safeguarding policy,
+            DSL procedures, Ofsted expectations and local authority routes.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="safety-card">
+              <h3>Before starting</h3>
+              <ul>
+                <li>Check known sensory triggers, medical needs and mobility access.</li>
+                <li>Prepare visual choices, pass cards and a quiet exit option.</li>
+                <li>Agree adult roles and who observes safety, not just activity completion.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6">
+            <article class="safety-card">
+              <h3>During play</h3>
+              <ul>
+                <li>Never force speech, eye contact, touch, speed or public performance.</li>
+                <li>Watch for freezing, hiding, silence, distress, sudden anger or withdrawal.</li>
+                <li>Stop if peers laugh, dominate, exclude or shame a child.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6">
+            <article class="safety-card">
+              <h3>What adults should be aware of</h3>
+              <ul>
+                <li>Sensory issues: noise, smell, light, texture, crowding and transitions.</li>
+                <li>Anxiety: unexpected changes, unclear rules, competitive pressure or fear of mistakes.</li>
+                <li>Communication: some children use movement, pointing, silence, objects or avoidance.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-md-6">
+            <article class="safety-card">
+              <h3>After the activity</h3>
+              <ul>
+                <li>Record what helped the child participate safely.</li>
+                <li>Review if group size, timing or materials need adjusting.</li>
+                <li>Escalate concerns through the correct safeguarding route if needed.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location section with Google Map embed requested by user. -->
+    <section class="py-5 bg-happy" id="location">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Location</span>
+          <h2>Business location</h2>
+          <p>Amberly Rd, London, W9 2JH</p>
+        </div>
+
+        <!-- Google Map iframe:
+             Uses Google Maps embed with the requested business location.
+             loading="lazy" improves performance.
+        -->
+        <div class="map-card">
+          <iframe
+            title="Google Map showing Amberly Road London W9 2JH"
+            src="https://www.google.com/maps?q=Amberly%20Rd%2C%20London%2C%20W9%202JH&output=embed"
+            width="100%"
+            height="420"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact form: required acceptance criteria. -->
+    <section class="py-5" id="contact">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <span class="eyebrow">Contact us</span>
+            <h2 class="display-6 fw-bold mt-3">Request activity cards, training or safeguarding support.</h2>
+            <p>
+              Tell us your setting, age range, group size, sensory needs and whether you need resources
+              for a school, playground, parent group or professional team.
+            </p>
+            <p class="contact-phone">
+              <i class="bi bi-telephone"></i>
+              <a href="tel:+447776200064">+44 77762 00064</a>
+            </p>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- Bootstrap form:
+                 form-control/form-select classes style inputs consistently.
+                 novalidate allows our JS + Bootstrap validation styles to control messages.
+            -->
+            <form class="contact-card" id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-control" id="name" name="name" type="text" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" name="email" type="email" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="subject">Subject</label>
+                  <select class="form-select" id="subject" name="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option>Activity cards</option>
+                    <option>Professional training</option>
+                    <option>Safeguarding toolkit</option>
+                    <option>School or playground implementation</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose a subject.</div>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                  <div class="invalid-feedback">Please write a short message.</div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary btn-lg rounded-pill px-5" type="submit">Send message</button>
+                </div>
+              </div>
+
+              <!-- JS removes d-none after successful validation. -->
+              <div class="alert alert-success mt-4 d-none" id="contactSuccess">
+                Thank you. Your message has been prepared successfully.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: repeated across all three pages for trust, social links and newsletter. -->
+  <footer class="site-footer mt-5">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Business summary block. -->
+        <div class="col-lg-4">
+          <h2 class="h5 text-white">PlayTogether Hub</h2>
+          <p class="footer-text">
+            A sustainable activity resource platform for schools, playgrounds, parents,
+            caregivers and professionals supporting children aged 4–12.
+          </p>
+          <p class="footer-text mb-0">
+            Phone: <a href="tel:+447776200064">+44 77762 00064</a>
+          </p>
+        </div>
+
+        <!-- Quick page links: only three pages as requested. -->
+        <div class="col-lg-2 col-md-4">
+          <h3 class="h6 text-white">Pages</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="about-training.html">About & Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter form: a could-have feature from the acceptance criteria. -->
+        <div class="col-lg-3 col-md-4">
+          <h3 class="h6 text-white">Newsletter</h3>
+          <form id="newsletterForm" class="newsletter-form">
+            <!-- form-control is Bootstrap styling for readable inputs. -->
+            <input class="form-control mb-2" type="text" placeholder="Your name" aria-label="Your name" required>
+            <input class="form-control mb-2" type="email" placeholder="Email address" aria-label="Email address" required>
+            <button class="btn btn-sunshine w-100" type="submit">Sign up</button>
+            <p id="newsletterMsg" class="small mt-2 mb-0 d-none">Thank you — you are signed up.</p>
+          </form>
+        </div>
+
+        <!-- Social media links: target blank opens in a new tab as required. -->
+        <div class="col-lg-3 col-md-4">
+          <h3 class="h6 text-white">Social</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+          <p class="footer-text small mt-3">© 2026 PlayTogether Hub. Educational MVP front-end project.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle:
+       Required for navbar hamburger and modal popups.
+       Bundle includes Popper, so no extra Popper script is needed.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript: renders activity cards, modals, filters and form messages. -->
+  <script src="js/main.js"></script>
+</body>
+</html>
