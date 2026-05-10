@@ -112,3 +112,63 @@ The phone number is included as a clickable `tel:` link:
 ```html
 <a href="tel:+447776200064">+44 77762 00064</a>
 ```
+
+---
+
+## Final Review Note
+
+The final version keeps all key project elements:
+
+- Three-page structure
+- Bootstrap navbar
+- Hero background system
+- Activity cards
+- Modal popups
+- Local images and favicon
+- Google Map
+- Safeguarding guidance
+- Contact details
+- Responsive CSS
+- JavaScript interactions
+- Accessibility features
+
+No core feature was intentionally removed. The hero layout was changed from side-by-side image columns to background-image hero sections to fix alignment and viewport issues.
+
+---
+
+## Use of AI Disclaimer
+
+This project was developed with support from AI-assisted guidance through ChatGPT.
+
+AI was used to help:
+
+- Plan the website structure
+- Improve the user journey
+- Generate and refine HTML sections
+- Review and improve CSS styling
+- Explain Bootstrap components
+- Create documentation
+- Troubleshoot Git and GitHub workflow
+- Improve accessibility, safeguarding wording and responsive design
+
+The project was developed in stages through conversation, review, testing, correction and manual implementation by the project owner.
+
+All final code should still be reviewed, tested and validated by the developer before production use.
+
+---
+
+## Development Process
+
+The project was improved through multiple stages:
+
+1. Initial website proposal and purpose definition
+2. Three-page structure planning
+3. HTML page creation
+4. Bootstrap layout improvements
+5. CSS colour, typography and card styling
+6. JavaScript activity card and modal logic
+7. Hero section redesign
+8. README and documentation creation
+9. GitHub version control and publishing preparation
+
+This staged process reflects real front-end development practice, including testing, feedback and refinement.
