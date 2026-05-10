@@ -160,6 +160,7 @@ a{
   letter-spacing:-.04em;
 }
 
+
 /* Eyebrow label:
    Used above headings to quickly explain the section.
 */
@@ -321,6 +322,14 @@ a{
   height:235px;
   object-fit:cover;
   background:#dbeafe;
+}
+/* Hero image improvement:
+   min-height makes the image visually stronger.
+   object-fit: cover helps the image fill its area professionally.
+*/
+.hero-cover-image{
+  min-height: 520px;
+  object-fit: cover;
 }
 .activity-card .card-body{
   padding:24px;
