@@ -30,6 +30,7 @@
   <!-- Custom CSS: local styling that changes colours, fonts, card hover, hero design and accessibility. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <!-- Accessibility link: keyboard users can skip repeated navigation and go directly to main content. -->
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -63,14 +64,14 @@
       -->
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <!-- Three page structure requested by user: Home, Activities, About + Training + Safeguarding. -->
+          <!-- Three-page structure: Home, Activities, About. -->
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-training.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 
-          <!-- CTA button: clear action path to contact section on page 3. -->
+          <!-- CTA button: links to the contact section on About page. -->
           <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary rounded-pill px-4" href="about-training.html#contact">Contact Us</a>
+            <a class="btn btn-primary rounded-pill px-4" href="about.html#contact">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -79,56 +80,90 @@
 
   <!-- Main landmark: helps screen readers identify the main content. -->
   <main id="main">
-    <!-- Hero section:
-         Bootstrap row/col creates a two-column responsive layout.
-         On mobile the columns stack automatically.
-    -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <!-- Eyebrow label: small high-contrast text to explain the core offer quickly. -->
-            <span class="eyebrow"><i class="bi bi-stars"></i> Sustainable inclusive play platform</span>
 
-            <!-- Main H1: explains the website in one direct sentence. -->
-            <h1 class="display-4 fw-bold mt-3">Activities that help every child join, play and feel safe.</h1>
+<!-- Hero section:
+     Background image version.
+     This removes the off-centre Bootstrap image column issue.
+-->
+<section class="hero-section hero-home-bg">
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
 
-            <p class="lead mt-3">
-              PlayTogether Hub offers practical activity cards, training material and safeguarding prompts for
-              schools, managed playgrounds, parents, caregivers and professionals supporting children aged 4–12.
-            </p>
+          <span class="eyebrow">
+            <i class="bi bi-stars"></i>
+            Sustainable inclusive play platform
+          </span>
 
-            <!-- CTA buttons: direct the user to the two main journeys. -->
-            <div class="d-flex flex-wrap gap-3 mt-4">
-              <a class="btn btn-primary btn-lg rounded-pill" href="activities.html">Explore Activities</a>
-              <a class="btn btn-outline-dark btn-lg rounded-pill" href="about-training.html#contact">Contact Us</a>
-            </div>
+          <h1 class="display-4 fw-bold mt-3">
+            Activities that help every child join, play and feel safe.
+          </h1>
 
-            <!-- Trust row: quick benefits using Bootstrap Icons. -->
-            <div class="trust-row mt-4">
-              <span><i class="bi bi-shield-check"></i> Safeguarding-first</span>
-              <span><i class="bi bi-universal-access"></i> SEND-aware</span>
-              <span><i class="bi bi-chat-dots"></i> Speech not required</span>
-            </div>
+          <p class="lead mt-3">
+            PlayTogether Hub offers practical activity cards, training material and safeguarding prompts for
+            schools, managed playgrounds, parents, caregivers and professionals supporting children aged 4–12.
+          </p>
+
+          <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+            <a class="btn btn-primary btn-lg rounded-pill" href="activities.html">
+              Explore Activities
+            </a>
+
+            <a class="btn btn-outline-dark btn-lg rounded-pill" href="about.html#contact">
+              Contact Us
+            </a>
           </div>
 
-          <div class="col-lg-6">
-            <!-- Local SVG image: avoids broken external image links and represents diverse children playing. -->
-            <img src="assets/images/hero-diverse-play.svg" class="img-fluid rounded-5 shadow-lg"
-              alt="Illustration of diverse children playing together in an inclusive activity">
+          <div class="trust-row justify-content-center mt-4">
+            <span><i class="bi bi-shield-check"></i> Safeguarding-first</span>
+            <span><i class="bi bi-universal-access"></i> SEND-aware</span>
+            <span><i class="bi bi-chat-dots"></i> Speech not required</span>
           </div>
+
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Facts section: quick proof-style overview. -->
+    <!-- Facts section:
+         Logic: age → time → group size → users.
+         CHANGE:
+         The last card text was shortened from
+         “User groups: schools, homes, playgrounds”
+         to “User groups” so all cards align visually.
+    -->
     <section class="py-5 bg-happy">
       <div class="container">
         <div class="row text-center g-4">
-          <div class="col-md-3"><div class="fact-card"><strong>4–12</strong><span>Age range</span></div></div>
-          <div class="col-md-3"><div class="fact-card"><strong>10–35</strong><span>Minute games</span></div></div>
-          <div class="col-md-3"><div class="fact-card"><strong>2–12</strong><span>Group size</span></div></div>
-          <div class="col-md-3"><div class="fact-card"><strong>3</strong><span>User groups: schools, homes, playgrounds</span></div></div>
+          <div class="col-md-3">
+            <div class="fact-card">
+              <strong>4–12</strong>
+              <span>Age range</span>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="fact-card">
+              <strong>10–35</strong>
+              <span>Minutes</span>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="fact-card">
+              <strong>2–12</strong>
+              <span>Group size</span>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="fact-card">
+              <strong>3</strong>
+              <span>User groups</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -217,6 +252,7 @@
               <span>Primary school support</span>
             </article>
           </div>
+
           <div class="col-md-4">
             <article class="testimonial-card">
               <div class="avatar avatar-two">PC</div>
@@ -225,6 +261,7 @@
               <span>Home activity support</span>
             </article>
           </div>
+
           <div class="col-md-4">
             <article class="testimonial-card">
               <div class="avatar avatar-three">YW</div>
@@ -245,7 +282,8 @@
             <h2>Ready to use inclusive activities in your setting?</h2>
             <p>Explore cards, review safeguarding, then contact PlayTogether Hub for training or implementation support.</p>
           </div>
-          <a class="btn btn-light btn-lg rounded-pill" href="about-training.html#contact">Start a conversation</a>
+
+          <a class="btn btn-light btn-lg rounded-pill" href="about.html#contact">Start a conversation</a>
         </div>
       </div>
     </section>
@@ -267,13 +305,13 @@
           </p>
         </div>
 
-        <!-- Quick page links: only three pages as requested. -->
+        <!-- Quick page links: only three pages. -->
         <div class="col-lg-2 col-md-4">
           <h3 class="h6 text-white">Pages</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="activities.html">Activities</a></li>
-            <li><a href="about-training.html">About & Training</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </div>
 
@@ -298,6 +336,7 @@
             <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
+
           <p class="footer-text small mt-3">© 2026 PlayTogether Hub. Educational MVP front-end project.</p>
         </div>
       </div>
