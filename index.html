@@ -127,46 +127,49 @@
   </div>
 </section>
 
-    <!-- Facts section:
-         Logic: age → time → group size → users.
-         CHANGE:
-         The last card text was shortened from
-         “User groups: schools, homes, playgrounds”
-         to “User groups” so all cards align visually.
-    -->
-    <section class="py-5 bg-happy">
-      <div class="container">
-        <div class="row text-center g-4">
-          <div class="col-md-3">
-            <div class="fact-card">
-              <strong>4–12</strong>
-              <span>Age range</span>
-            </div>
-          </div>
+<!-- Facts section:
+     Logic: age → time → group size → users.
+     aria-labelledby connects the section to its heading.
+-->
+<section class="py-5 bg-happy" aria-labelledby="platform-facts-heading">
+  <div class="container">
 
-          <div class="col-md-3">
-            <div class="fact-card">
-              <strong>10–35</strong>
-              <span>Minutes</span>
-            </div>
-          </div>
+    <!-- Hidden heading fixes accessibility/validator warning without changing the design. -->
+    <h2 id="platform-facts-heading" class="visually-hidden">
+      Platform facts overview
+    </h2>
 
-          <div class="col-md-3">
-            <div class="fact-card">
-              <strong>2–12</strong>
-              <span>Group size</span>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="fact-card">
-              <strong>3</strong>
-              <span>User groups</span>
-            </div>
-          </div>
+    <div class="row text-center g-4">
+      <div class="col-md-3">
+        <div class="fact-card">
+          <strong>4–12</strong>
+          <span>Age range</span>
         </div>
       </div>
-    </section>
+
+      <div class="col-md-3">
+        <div class="fact-card">
+          <strong>10–35</strong>
+          <span>Minutes</span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="fact-card">
+          <strong>2–12</strong>
+          <span>Group size</span>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="fact-card">
+          <strong>3</strong>
+          <span>User groups</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Services overview: from acceptance criteria, using responsive Bootstrap cards. -->
     <section class="py-5">
@@ -224,7 +227,6 @@
        Helps screen readers and fixes validator warning.
        visually-hidden is a Bootstrap accessibility class.
   -->
-  <h2 class="visually-hidden">Platform facts overview</h2>
 
   <div class="container">
         <div class="section-heading">
