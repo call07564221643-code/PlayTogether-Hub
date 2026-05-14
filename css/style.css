@@ -1,9 +1,28 @@
 /* =========================================================
    PlayTogether Hub - style.css
-   Purpose:
+
+   PROJECT KEYWORDS:
+   responsive design, accessibility, SaaS UI, Bootstrap override,
+   activity cards, modal styling, child-friendly colour palette,
+   inclusive education, UX/UI, reusable components, front-end MVP.
+
+   PURPOSE:
    This file improves Bootstrap's default design with a happier,
-   child-friendly palette, readable fonts, card animation and
-   accessibility styling.
+   child-friendly, accessible and modern educational SaaS style.
+
+   IMPORTANT:
+   Bootstrap gives the basic layout and components.
+   This CSS file customises/overrides Bootstrap to match the project brand.
+   ========================================================= */
+
+
+/* =========================================================
+   1. DESIGN SYSTEM VARIABLES
+   [CSS SYSTEM]
+   Purpose:
+   Stores reusable colours, spacing, radius and shadow values.
+   Effect:
+   Makes the full website consistent and easier to maintain.
    ========================================================= */
 
 :root{
@@ -16,17 +35,35 @@
   --green:#22c55e;
   --mint:#2dd4bf;
   --purple:#a78bfa;
+
   --ink:#0f172a;
   --muted:#64748b;
   --soft:#fff7ed;
   --soft-blue:#eff6ff;
   --white:#ffffff;
+
+  --border:#e2e8f0;
   --radius:26px;
   --shadow:0 18px 45px rgba(15,23,42,.12);
+  --soft-shadow:0 8px 28px rgba(15,23,42,.06);
 }
+
+
+/* =========================================================
+   2. GLOBAL RESET AND BASE STYLES
+   [CSS BASE]
+   Purpose:
+   Creates consistent spacing, fonts and layout behaviour.
+   Effect:
+   Ensures the page behaves well across browsers.
+   ========================================================= */
 
 *{
   box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
@@ -34,20 +71,44 @@ body{
   font-family:"Atkinson Hyperlegible", Arial, sans-serif;
   color:var(--ink);
   line-height:1.7;
-  background:#ffffff;
+  background:var(--white);
 }
 
-h1,h2,h3,h4,h5,h6,.navbar-brand{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand{
   font-family:"Nunito", Arial, sans-serif;
 }
 
 img{
   max-width:100%;
+  display:block;
 }
 
 a{
   text-decoration:none;
 }
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus{
+  outline:3px solid rgba(37,99,235,.35);
+  outline-offset:3px;
+}
+
+
+/* =========================================================
+   3. ACCESSIBILITY SKIP LINK
+   [ACCESSIBILITY]
+   Purpose:
+   Helps keyboard users skip navigation and reach main content.
+   ========================================================= */
 
 .skip-link{
   position:absolute;
@@ -63,6 +124,19 @@ a{
 .skip-link:focus{
   top:12px;
 }
+
+
+/* =========================================================
+   4. NAVBAR AND BRANDING
+   [BOOTSTRAP OVERRIDE]
+   Bootstrap provides:
+   .navbar, .navbar-brand, .nav-link
+
+   This CSS changes:
+   - navbar shadow
+   - brand logo style
+   - active and hover link colours
+   ========================================================= */
 
 .brand-mark{
   width:44px;
@@ -85,18 +159,45 @@ a{
 }
 
 .nav-link:hover,
-.nav-link:focus{
+.nav-link:focus,
+.nav-link.active{
   color:var(--blue);
 }
+
+
+/* =========================================================
+   5. BUTTON SYSTEM
+   [BOOTSTRAP OVERRIDE]
+   Bootstrap provides:
+   .btn, .btn-primary, .btn-outline-primary
+
+   This CSS changes:
+   - button colours
+   - gradient background
+   - stronger visual identity
+   ========================================================= */
 
 .btn-primary{
   background:linear-gradient(135deg,var(--blue),var(--sky));
   border:0;
   box-shadow:0 10px 24px rgba(37,99,235,.22);
+  font-weight:800;
 }
 
 .btn-primary:hover{
   background:linear-gradient(135deg,var(--blue-dark),var(--blue));
+}
+
+.btn-outline-primary{
+  border:2px solid var(--blue);
+  color:var(--blue);
+  font-weight:800;
+}
+
+.btn-outline-primary:hover{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
 }
 
 .btn-sunshine{
@@ -110,11 +211,16 @@ a{
   background:#fde047;
 }
 
+
 /* =========================================================
-   HERO BACKGROUND SYSTEM
+   6. HERO BACKGROUND SYSTEM
+   [CUSTOM HERO SYSTEM]
+   Purpose:
    Used on Home, Activities and About pages.
-   The hero images are now backgrounds, not side-column images.
-   This fixes the left/right alignment problem across all viewports.
+
+   Effect:
+   Creates full-width background-image hero sections.
+   This avoids image alignment issues caused by two-column images.
    ========================================================= */
 
 .hero-section,
@@ -128,17 +234,14 @@ a{
   overflow:hidden;
 }
 
-/* Home page hero background */
 .hero-home-bg{
   background-image:url("../assets/images/hero-diverse-play.svg");
 }
 
-/* Activities page hero background */
 .hero-activities-bg{
   background-image:url("../assets/images/playground-service.svg");
 }
 
-/* About page hero background */
 .hero-about-bg{
   background-image:url("../assets/images/training-safeguarding.svg");
 }
@@ -150,13 +253,12 @@ a{
   display:flex;
   align-items:center;
   padding:90px 0;
-
   background:linear-gradient(
     90deg,
-    rgba(255,255,255,.95) 0%,
-    rgba(255,255,255,.90) 35%,
-    rgba(255,255,255,.75) 70%,
-    rgba(255,255,255,.62) 100%
+    rgba(255,255,255,.96) 0%,
+    rgba(255,255,255,.91) 35%,
+    rgba(255,255,255,.76) 70%,
+    rgba(255,255,255,.64) 100%
   );
 }
 
@@ -174,6 +276,16 @@ a{
   margin-left:auto;
   margin-right:auto;
 }
+
+
+/* =========================================================
+   7. EYEBROW LABELS AND TRUST BADGES
+   [CSS COMPONENT]
+   Purpose:
+   Creates rounded labels and trust badges.
+   Effect:
+   Improves visual hierarchy and makes key ideas easy to scan.
+   ========================================================= */
 
 .eyebrow{
   display:inline-flex;
@@ -205,6 +317,14 @@ a{
   font-weight:800;
 }
 
+
+/* =========================================================
+   8. SECTION BACKGROUNDS AND HEADINGS
+   [CSS COMPONENT]
+   Purpose:
+   Gives sections consistent spacing and visual rhythm.
+   ========================================================= */
+
 .bg-happy{
   background:linear-gradient(135deg,#fff7ed,#ecfeff);
 }
@@ -227,6 +347,16 @@ a{
   font-size:1.08rem;
 }
 
+
+/* =========================================================
+   9. REUSABLE CARD COMPONENTS
+   [BOOTSTRAP CARD ENHANCEMENT]
+   Purpose:
+   Creates consistent card styles across the project.
+   Effect:
+   Cards look like one reusable design system.
+   ========================================================= */
+
 .fact-card,
 .feature-card,
 .testimonial-card,
@@ -237,13 +367,12 @@ a{
 .contact-card,
 .filter-panel{
   background:#fff;
-  border:1px solid #e2e8f0;
+  border:1px solid var(--border);
   border-radius:var(--radius);
   padding:26px;
-  box-shadow:0 8px 28px rgba(15,23,42,.06);
+  box-shadow:var(--soft-shadow);
 }
 
-/* Fixed height makes all four fact cards align evenly. */
 .fact-card{
   min-height:135px;
   display:flex;
@@ -281,6 +410,17 @@ a{
   border-color:#bae6fd;
 }
 
+
+/* =========================================================
+   10. ICON SYSTEM
+   [BOOTSTRAP ICON STYLING]
+   Purpose:
+   Styles Bootstrap icons used in cards and safeguarding sections.
+
+   Required safeguarding icon:
+   <i class="bi bi-shield-heart"></i>
+   ========================================================= */
+
 .feature-card i{
   width:58px;
   height:58px;
@@ -292,6 +432,24 @@ a{
   font-size:1.7rem;
   margin-bottom:18px;
 }
+
+/* Icons inside headings should not become large boxes. */
+.service-card h3 i,
+.module-card h3 i,
+.safety-card h3 i,
+.modal-body h3 i{
+  color:var(--blue);
+  margin-right:6px;
+  font-size:1.05em;
+}
+
+
+/* =========================================================
+   11. FEATURE, SERVICE AND MODULE TEXT
+   [CSS COMPONENT]
+   Purpose:
+   Controls heading and paragraph consistency.
+   ========================================================= */
 
 .feature-card h3,
 .service-card h3,
@@ -307,6 +465,14 @@ a{
   color:var(--muted);
 }
 
+
+/* =========================================================
+   12. SERVICE CARDS
+   [CSS COMPONENT]
+   Purpose:
+   Styles Activities page service overview cards.
+   ========================================================= */
+
 .service-card{
   overflow:hidden;
 }
@@ -317,6 +483,7 @@ a{
   object-fit:cover;
   border-radius:22px;
   margin-bottom:18px;
+  background:#dbeafe;
 }
 
 .service-card a{
@@ -324,9 +491,24 @@ a{
   color:var(--blue);
 }
 
+.service-card a:hover{
+  color:var(--blue-dark);
+}
+
+
+/* =========================================================
+   13. ACTIVITY CARDS
+   [OPEN CARD VISUAL SYSTEM]
+   Purpose:
+   Styles JavaScript-generated activity cards.
+
+   Related JavaScript:
+   createActivityCard() in js/main.js creates these cards.
+   ========================================================= */
+
 .activity-card{
   background:#fff;
-  border:1px solid #e2e8f0;
+  border:1px solid var(--border);
   border-radius:var(--radius);
   overflow:hidden;
 }
@@ -342,6 +524,14 @@ a{
   padding:24px;
 }
 
+.activity-card h3{
+  color:var(--ink);
+}
+
+.activity-card p{
+  color:var(--muted);
+}
+
 .activity-meta{
   display:flex;
   flex-wrap:wrap;
@@ -352,12 +542,53 @@ a{
 .activity-meta span{
   background:#f8fafc;
   color:#334155;
-  border:1px solid #e2e8f0;
+  border:1px solid var(--border);
   border-radius:999px;
   padding:6px 10px;
   font-size:.88rem;
   font-weight:800;
 }
+
+
+/* =========================================================
+   14. FILTER PANEL
+   [FILTER STYLE]
+   Purpose:
+   Styles the dropdown used to filter activity cards.
+
+   Related JavaScript:
+   setupActivityFilter() in js/main.js.
+   ========================================================= */
+
+.filter-panel{
+  max-width:720px;
+  margin:auto;
+}
+
+.filter-panel .form-label{
+  color:var(--ink);
+}
+
+.form-select,
+.form-control{
+  border-radius:16px;
+  border:1px solid var(--border);
+  padding:12px 14px;
+}
+
+.form-select:focus,
+.form-control:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 .25rem rgba(37,99,235,.18);
+}
+
+
+/* =========================================================
+   15. TESTIMONIAL CARDS
+   [CSS COMPONENT]
+   Purpose:
+   Adds trust signals and user-style feedback.
+   ========================================================= */
 
 .testimonial-card{
   height:100%;
@@ -374,9 +605,17 @@ a{
   margin-bottom:18px;
 }
 
-.avatar-one{background:var(--blue);}
-.avatar-two{background:var(--pink);}
-.avatar-three{background:var(--green);}
+.avatar-one{
+  background:var(--blue);
+}
+
+.avatar-two{
+  background:var(--pink);
+}
+
+.avatar-three{
+  background:var(--green);
+}
 
 .testimonial-card h3{
   font-size:1.05rem;
@@ -387,6 +626,14 @@ a{
 .testimonial-card span{
   color:var(--muted);
 }
+
+
+/* =========================================================
+   16. CTA PANEL
+   [CSS COMPONENT]
+   Purpose:
+   Creates strong call-to-action section.
+   ========================================================= */
 
 .cta-panel{
   display:flex;
@@ -404,6 +651,14 @@ a{
   margin-bottom:0;
   color:#eff6ff;
 }
+
+
+/* =========================================================
+   17. ABOUT / TRAINING / SAFEGUARDING COMPONENTS
+   [SAFEGUARDING STYLE]
+   Purpose:
+   Supports module cards, safety cards, contact phone and map.
+   ========================================================= */
 
 .module-card span{
   display:inline-block;
@@ -433,21 +688,83 @@ a{
 .map-card{
   overflow:hidden;
   border-radius:var(--radius);
-  border:1px solid #e2e8f0;
+  border:1px solid var(--border);
   box-shadow:var(--shadow);
   background:#fff;
 }
 
+
+/* =========================================================
+   18. MODAL STYLING
+   [POPUP MODAL STYLE]
+   Purpose:
+   Styles the Bootstrap popup used by the Open card button.
+
+   Related JavaScript:
+   openActivityModal() in js/main.js.
+   ========================================================= */
+
 .modal-content{
   border:0;
+  border-radius:28px;
   box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.modal-header{
+  padding:24px 28px 10px;
+}
+
+.modal-title{
+  color:var(--ink);
+  letter-spacing:-.02em;
+}
+
+.modal-body{
+  padding:24px 28px;
+}
+
+.modal-body img{
+  width:100%;
+  max-height:320px;
+  object-fit:cover;
+  background:#dbeafe;
+  border-radius:22px;
 }
 
 .modal-body h3{
   margin-top:1.4rem;
   font-size:1.15rem;
   font-weight:900;
+  color:var(--ink);
 }
+
+.modal-body p,
+.modal-body li{
+  color:#475569;
+}
+
+.modal-body ol{
+  padding-left:1.2rem;
+}
+
+.modal-footer{
+  padding:10px 28px 24px;
+}
+
+.alert-info{
+  border:1px solid #bae6fd;
+  background:#e0f2fe;
+  color:#075985;
+}
+
+
+/* =========================================================
+   19. FOOTER
+   [CSS COMPONENT]
+   Purpose:
+   Styles footer, links, newsletter and social icons.
+   ========================================================= */
 
 .site-footer{
   background:#0f172a;
@@ -461,10 +778,18 @@ a{
   color:#e0f2fe;
 }
 
+.site-footer a:hover{
+  color:#fff;
+}
+
 .footer-links{
   list-style:none;
   padding:0;
   margin:0;
+}
+
+.footer-links li{
+  margin-bottom:8px;
 }
 
 .footer-links a:hover{
@@ -485,13 +810,22 @@ a{
   color:#fff;
   border-radius:15px;
   font-size:1.2rem;
+  transition:background .25s ease, transform .25s ease;
 }
 
 .social-icons a:hover{
   background:var(--blue);
+  transform:translateY(-3px);
 }
 
-/* Tablet */
+
+/* =========================================================
+   20. TABLET RESPONSIVE DESIGN
+   [RESPONSIVE CSS]
+   Purpose:
+   Adjusts hero and CTA layout on tablet screens.
+   ========================================================= */
+
 @media (max-width:991px){
   .hero-section,
   .page-hero,
@@ -509,7 +843,14 @@ a{
   }
 }
 
-/* Mobile */
+
+/* =========================================================
+   21. MOBILE RESPONSIVE DESIGN
+   [RESPONSIVE CSS]
+   Purpose:
+   Improves readability and spacing on small screens.
+   ========================================================= */
+
 @media (max-width:576px){
   .display-4{
     font-size:2.35rem;
@@ -528,5 +869,36 @@ a{
   .activity-card img,
   .service-card img{
     height:195px;
+  }
+
+  .modal-header,
+  .modal-body,
+  .modal-footer{
+    padding-left:18px;
+    padding-right:18px;
+  }
+
+  .modal-body img{
+    max-height:230px;
+  }
+
+  .cta-panel{
+    padding:28px;
+  }
+}
+
+
+/* =========================================================
+   22. REDUCED MOTION ACCESSIBILITY
+   [ACCESSIBILITY]
+   Purpose:
+   Respects users who prefer less animation.
+   ========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+  *{
+    scroll-behavior:auto !important;
+    transition:none !important;
+    animation:none !important;
   }
 }

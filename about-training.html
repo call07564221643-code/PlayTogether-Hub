@@ -1,111 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- HTML meta: UTF-8 supports normal English text and symbols correctly. -->
+  <!-- =========================================================
+       FILE: about.html
+       PAGE: About, Training, Safeguarding and Contact page
+
+       PROJECT PURPOSE:
+       This page explains:
+       - What PlayTogether Hub is
+       - Who the platform helps
+       - Training modules
+       - Safeguarding guidance
+       - Location
+       - Contact form
+
+       EDUCATIONAL PURPOSE:
+       This file demonstrates:
+       - Semantic HTML
+       - Bootstrap responsive layout
+       - Bootstrap navbar
+       - Bootstrap form styling
+       - Bootstrap Icons
+       - CSS override structure
+       - Contact form JavaScript hook
+
+       SPECIAL MARKS:
+       [BOOTSTRAP]    = Bootstrap class/component
+       [CSS OVERRIDE] = Styled in css/style.css
+       [SAFEGUARDING] = Uses <i class="bi bi-shield-heart"></i>
+       [JS HOOK]      = Used by js/main.js
+       ========================================================= -->
+
   <meta charset="UTF-8">
 
-  <!-- HTML meta: viewport makes the website responsive on mobile, tablet and desktop. -->
+  <!-- [BOOTSTRAP] Enables responsive layout on mobile/tablet/desktop. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO title: appears in the browser tab and search results. -->
   <title>About | PlayTogether Hub</title>
 
-  <!-- SEO description: explains the page purpose to search engines and users. -->
   <meta name="description" content="About PlayTogether Hub, training resources, safeguarding guidance and contact details.">
 
-  <!-- Favicon: local SVG icon stored in assets/icons so the browser tab has a brand icon. -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 
-  <!-- Google Fonts: Nunito gives a friendly child-focused feel; Atkinson Hyperlegible improves readability/accessibility. -->
+  <!-- Google Fonts: friendly heading font + accessible body font. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS v5.3.3: gives responsive grid, navbar, cards, buttons, forms and modal styling. -->
+  <!-- [BOOTSTRAP] Main framework CSS. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons: used for social icons, service icons and small visual labels. -->
+  <!-- [BOOTSTRAP] Icon library, including shield-heart. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Custom CSS: local styling that changes colours, fonts, card hover, hero design and accessibility. -->
+  <!-- [CSS OVERRIDE] Custom project design. -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <!-- Accessibility link: keyboard users can skip repeated navigation and go directly to main content. -->
+
+  <!-- Accessibility skip link. -->
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Bootstrap Navbar:
-       navbar = creates navigation component.
-       navbar-expand-lg = shows full menu on large screens; collapses on smaller screens.
-       sticky-top = keeps navbar visible at the top while scrolling.
-       bg-white and border-bottom = clean readable top bar.
-  -->
+  <!-- =========================================================
+       NAVBAR
+       [BOOTSTRAP] Responsive navbar.
+       [CSS OVERRIDE] .brand-mark, .navbar, .nav-link, .btn-primary.
+       ========================================================= -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
     <div class="container">
-      <!-- Brand link: returns user to homepage. -->
+
       <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html" aria-label="PlayTogether Hub homepage">
         <span class="brand-mark">PT</span>
         <span>PlayTogether Hub</span>
       </a>
 
-      <!-- Bootstrap mobile button:
-           navbar-toggler = hamburger button.
-           data-bs-toggle and data-bs-target connect the button to the menu below.
-      -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar" aria-expanded="false" aria-label="Open navigation menu">
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar"
+              aria-expanded="false"
+              aria-label="Open navigation menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Bootstrap collapsible menu:
-           collapse navbar-collapse = hides/shows menu on mobile.
-           id must match data-bs-target above.
-      -->
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto align-items-lg-center">
-          <!-- Three page structure requested by user: Home, Activities, About + Training + Safeguarding. -->
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-training.html">About</a></li>
 
-          <!-- CTA button: clear action path to contact section on page 3. -->
-          <li class="nav-item ms-lg-3">
-            <a class="btn btn-primary rounded-pill px-4" href="about-training.html#contact">Contact Us</a>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="activities.html">Activities</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html" aria-current="page">About</a>
+          </li>
+
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary rounded-pill px-4" href="#contact">Contact Us</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
   <main id="main">
-    <!-- About hero: combines about, safeguarding and training in one page as requested. -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6">
-            <span class="eyebrow"><i class="bi bi-shield-heart"></i> About</span>
-            <h1>A sustainable activity platform for safer inclusive play.</h1>
-            <p>
-              PlayTogether Hub supports schools, managed playgrounds, professionals, parents and caregivers
-              with practical resources for children aged 4–12 from different ethnicities, backgrounds,
-              disabilities, autism spectrum profiles and communication needs.
-            </p>
-            <p class="mb-0">
-              Business phone: <a href="tel:+447776200064" class="fw-bold">+44 77762 00064</a>
-            </p>
-          </div>
-          <div class="col-lg-6">
-            <img src="assets/images/training-safeguarding.svg" class="img-fluid rounded-5 shadow-lg"
-              alt="Illustration of adults learning safeguarding and inclusive activity guidance">
+
+    <!-- =========================================================
+         HERO SECTION
+         [BOOTSTRAP] container, row, col-lg-9, text-center.
+         [CSS OVERRIDE] .page-hero, .hero-about-bg, .hero-overlay.
+         [SAFEGUARDING] Uses shield-heart icon.
+         Effect:
+         Introduces the page as About + Training + Safeguarding.
+         ========================================================= -->
+    <section class="page-hero hero-about-bg">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-9">
+
+              <span class="eyebrow">
+                <i class="bi bi-shield-heart"></i>
+                About • Training • Safeguarding
+              </span>
+
+              <h1 class="display-4 fw-bold mt-3">
+                A sustainable activity platform for safer inclusive play.
+              </h1>
+
+              <p class="lead mt-3">
+                PlayTogether Hub supports schools, managed playgrounds, professionals, parents and caregivers
+                with practical resources for children aged 4–12 from different ethnicities, backgrounds,
+                disabilities, autism spectrum profiles and communication needs.
+              </p>
+
+              <p class="mb-0 mt-4">
+                Business phone:
+                <a href="tel:+447776200064" class="fw-bold">+44 77762 00064</a>
+              </p>
+
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About business section. -->
+    <!-- =========================================================
+         ABOUT BUSINESS CARDS
+         [BOOTSTRAP] row, g-4, col-lg-4.
+         [CSS OVERRIDE] .info-card.
+         Effect:
+         Explains purpose, target users and core promise.
+         ========================================================= -->
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
+
           <div class="col-lg-4">
             <article class="info-card">
               <h2>Business purpose</h2>
@@ -135,19 +191,38 @@
               </p>
             </article>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Training section: professional material overview. -->
+    <!-- =========================================================
+         TRAINING SECTION
+         [BOOTSTRAP] responsive grid.
+         [CSS OVERRIDE] .module-card.
+         [SAFEGUARDING] Module 05 uses shield-heart icon.
+         Effect:
+         Shows professional learning modules.
+         ========================================================= -->
     <section class="py-5 bg-happy" id="training">
       <div class="container">
+
         <div class="section-heading">
-          <span class="eyebrow">Training material</span>
+          <span class="eyebrow">
+            <i class="bi bi-mortarboard"></i>
+            Training material
+          </span>
+
           <h2>Short modules for professionals, parents and caregivers</h2>
+
+          <p>
+            These modules help adults understand communication differences,
+            sensory needs, inclusion and safe participation.
+          </p>
         </div>
 
         <div class="row g-4">
+
           <div class="col-md-6 col-lg-4">
             <article class="module-card">
               <span>Module 01</span>
@@ -183,7 +258,10 @@
           <div class="col-md-6 col-lg-4">
             <article class="module-card">
               <span>Module 05</span>
-              <h3>Safeguarding in Play</h3>
+              <h3>
+                <i class="bi bi-shield-heart"></i>
+                Safeguarding in Play
+              </h3>
               <p>Identify peer pressure, humiliation, unsafe dynamics, adult boundaries and when to stop an activity.</p>
             </article>
           </div>
@@ -195,16 +273,29 @@
               <p>Use calm language such as “You can pass”, “Show me another way”, and “Let’s make it smaller”.</p>
             </article>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Safeguarding section: key requirement from user. -->
+    <!-- =========================================================
+         SAFEGUARDING SECTION
+         [SAFEGUARDING] Uses shield-heart icons.
+         [CSS OVERRIDE] .safety-card.
+         Effect:
+         Shows safety checks before, during and after play.
+         ========================================================= -->
     <section class="py-5" id="safeguarding">
       <div class="container">
+
         <div class="section-heading">
-          <span class="eyebrow">Safeguarding</span>
+          <span class="eyebrow">
+            <i class="bi bi-shield-heart"></i>
+            Safeguarding
+          </span>
+
           <h2>Safeguarding must be visible before, during and after play</h2>
+
           <p>
             This project is educational and should be aligned with the setting’s safeguarding policy,
             DSL procedures, Ofsted expectations and local authority routes.
@@ -212,9 +303,10 @@
         </div>
 
         <div class="row g-4">
+
           <div class="col-md-6">
             <article class="safety-card">
-              <h3>Before starting</h3>
+              <h3><i class="bi bi-shield-heart"></i> Before starting</h3>
               <ul>
                 <li>Check known sensory triggers, medical needs and mobility access.</li>
                 <li>Prepare visual choices, pass cards and a quiet exit option.</li>
@@ -225,7 +317,7 @@
 
           <div class="col-md-6">
             <article class="safety-card">
-              <h3>During play</h3>
+              <h3><i class="bi bi-shield-heart"></i> During play</h3>
               <ul>
                 <li>Never force speech, eye contact, touch, speed or public performance.</li>
                 <li>Watch for freezing, hiding, silence, distress, sudden anger or withdrawal.</li>
@@ -236,7 +328,7 @@
 
           <div class="col-md-6">
             <article class="safety-card">
-              <h3>What adults should be aware of</h3>
+              <h3><i class="bi bi-shield-heart"></i> What adults should be aware of</h3>
               <ul>
                 <li>Sensory issues: noise, smell, light, texture, crowding and transitions.</li>
                 <li>Anxiety: unexpected changes, unclear rules, competitive pressure or fear of mistakes.</li>
@@ -247,7 +339,7 @@
 
           <div class="col-md-6">
             <article class="safety-card">
-              <h3>After the activity</h3>
+              <h3><i class="bi bi-shield-heart"></i> After the activity</h3>
               <ul>
                 <li>Record what helped the child participate safely.</li>
                 <li>Review if group size, timing or materials need adjusting.</li>
@@ -255,23 +347,30 @@
               </ul>
             </article>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Location section with Google Map embed requested by user. -->
+    <!-- =========================================================
+         LOCATION SECTION
+         [CSS OVERRIDE] .map-card.
+         Effect:
+         Shows map location using iframe.
+         ========================================================= -->
     <section class="py-5 bg-happy" id="location">
       <div class="container">
+
         <div class="section-heading">
-          <span class="eyebrow">Location</span>
+          <span class="eyebrow">
+            <i class="bi bi-geo-alt"></i>
+            Location
+          </span>
+
           <h2>Business location</h2>
           <p>Amberly Rd, London, W9 2JH</p>
         </div>
 
-        <!-- Google Map iframe:
-             Uses Google Maps embed with the requested business location.
-             loading="lazy" improves performance.
-        -->
         <div class="map-card">
           <iframe
             title="Google Map showing Amberly Road London W9 2JH"
@@ -284,20 +383,37 @@
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
+
       </div>
     </section>
 
-    <!-- Contact form: required acceptance criteria. -->
+    <!-- =========================================================
+         CONTACT SECTION
+         [BOOTSTRAP] form-control, form-select, invalid-feedback.
+         [JS HOOK] main.js uses #contactForm and #contactSuccess.
+         Effect:
+         Front-end contact form with validation message.
+         ========================================================= -->
     <section class="py-5" id="contact">
       <div class="container">
+
         <div class="row g-5 align-items-start">
+
           <div class="col-lg-5">
-            <span class="eyebrow">Contact us</span>
-            <h2 class="display-6 fw-bold mt-3">Request activity cards, training or safeguarding support.</h2>
+            <span class="eyebrow">
+              <i class="bi bi-envelope"></i>
+              Contact us
+            </span>
+
+            <h2 class="display-6 fw-bold mt-3">
+              Request activity cards, training or safeguarding support.
+            </h2>
+
             <p>
               Tell us your setting, age range, group size, sensory needs and whether you need resources
               for a school, playground, parent group or professional team.
             </p>
+
             <p class="contact-phone">
               <i class="bi bi-telephone"></i>
               <a href="tel:+447776200064">+44 77762 00064</a>
@@ -305,12 +421,10 @@
           </div>
 
           <div class="col-lg-7">
-            <!-- Bootstrap form:
-                 form-control/form-select classes style inputs consistently.
-                 novalidate allows our JS + Bootstrap validation styles to control messages.
-            -->
             <form class="contact-card" id="contactForm" novalidate>
+
               <div class="row g-3">
+
                 <div class="col-md-6">
                   <label class="form-label" for="name">Name</label>
                   <input class="form-control" id="name" name="name" type="text" required>
@@ -342,26 +456,34 @@
                 </div>
 
                 <div class="col-12">
-                  <button class="btn btn-primary btn-lg rounded-pill px-5" type="submit">Send message</button>
+                  <button class="btn btn-primary btn-lg rounded-pill px-5" type="submit">
+                    Send message
+                  </button>
                 </div>
+
               </div>
 
-              <!-- JS removes d-none after successful validation. -->
               <div class="alert alert-success mt-4 d-none" id="contactSuccess">
                 Thank you. Your message has been prepared successfully.
               </div>
+
             </form>
           </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer: repeated across all three pages for trust, social links and newsletter. -->
+  <!-- =========================================================
+       FOOTER
+       [JS HOOK] main.js uses #newsletterForm and #newsletterMsg.
+       ========================================================= -->
   <footer class="site-footer mt-5">
     <div class="container py-5">
       <div class="row g-4">
-        <!-- Business summary block. -->
+
         <div class="col-lg-4">
           <h2 class="h5 text-white">PlayTogether Hub</h2>
           <p class="footer-text">
@@ -373,50 +495,56 @@
           </p>
         </div>
 
-        <!-- Quick page links: only three pages as requested. -->
         <div class="col-lg-2 col-md-4">
           <h3 class="h6 text-white">Pages</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="activities.html">Activities</a></li>
-            <li><a href="about-training.html">About & Training</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </div>
 
-        <!-- Newsletter form: a could-have feature from the acceptance criteria. -->
         <div class="col-lg-3 col-md-4">
           <h3 class="h6 text-white">Newsletter</h3>
+
           <form id="newsletterForm" class="newsletter-form">
-            <!-- form-control is Bootstrap styling for readable inputs. -->
             <input class="form-control mb-2" type="text" placeholder="Your name" aria-label="Your name" required>
             <input class="form-control mb-2" type="email" placeholder="Email address" aria-label="Email address" required>
-            <button class="btn btn-sunshine w-100" type="submit">Sign up</button>
-            <p id="newsletterMsg" class="small mt-2 mb-0 d-none">Thank you — you are signed up.</p>
+
+            <button class="btn btn-sunshine w-100" type="submit">
+              Sign up
+            </button>
+
+            <p id="newsletterMsg" class="small mt-2 mb-0 d-none">
+              Thank you — you are signed up.
+            </p>
           </form>
         </div>
 
-        <!-- Social media links: target blank opens in a new tab as required. -->
         <div class="col-lg-3 col-md-4">
           <h3 class="h6 text-white">Social</h3>
+
           <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
           </div>
-          <p class="footer-text small mt-3">© 2026 PlayTogether Hub. Educational MVP front-end project.</p>
+
+          <p class="footer-text small mt-3">
+            © 2026 PlayTogether Hub. Educational MVP front-end project.
+          </p>
         </div>
+
       </div>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle:
-       Required for navbar hamburger and modal popups.
-       Bundle includes Popper, so no extra Popper script is needed.
-  -->
+  <!-- [BOOTSTRAP] Enables navbar collapse. -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JavaScript: renders activity cards, modals, filters and form messages. -->
+  <!-- [JS HOOK] Handles forms and shared interactions. -->
   <script src="js/main.js"></script>
+
 </body>
 </html>
