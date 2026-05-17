@@ -692,6 +692,20 @@ textarea:focus{
   box-shadow:var(--shadow);
   background:#fff;
 }
+/* =========================================================
+   ABOUT INFO CARD ALIGNMENT FIX
+   [CHANGE ADDED]
+   Purpose:
+   Keeps the three About page information cards equal height
+   and aligned in the same row.
+
+   Effect:
+   Fixes the Core promise card alignment issue.
+   ========================================================= */
+
+.about-info-card{
+  width:100%;
+}
 
 
 /* =========================================================
