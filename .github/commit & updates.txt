@@ -1,0 +1,8 @@
+> git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - -S --allow-empty
+error: gpg failed to sign the data:
+gpg: skipped "Hani <call07564221643@gmail.com>": No secret key
+[GNUPG:] INV_SGNR 9 Hani <call07564221643@gmail.com>
+[GNUPG:] FAILURE sign 17
+gpg: signing failed: No secret key
+
+fatal: failed to write commit object
