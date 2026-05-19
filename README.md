@@ -238,15 +238,12 @@ INSERT IMAGE HERE
 
 ## W3C HTML Validation
 
-INSERT IMAGE HERE
-
 ![HTML Validation Screenshot](assets/screenshots/html-validation.png)
 
 ---
 
 ## W3C CSS Validation
 
-INSERT IMAGE HERE
 
 ![CSS Validation Screenshot](assets/screenshots/css-validation.png)
 
@@ -256,7 +253,6 @@ INSERT IMAGE HERE
 
 ## Home Page Lighthouse Test
 
-INSERT IMAGE HERE
 
 ![Home Lighthouse Screenshot](assets/screenshots/lighthouse-home.png)
 
@@ -264,45 +260,18 @@ INSERT IMAGE HERE
 
 ## Activities Page Lighthouse Test
 
-INSERT IMAGE HERE
 
 ![Activities Lighthouse Screenshot](assets/screenshots/lighthouse-activities.png)
 
 ---
 
-## About Page Lighthouse Test
-
-INSERT IMAGE HERE
-
-![About Lighthouse Screenshot](assets/screenshots/lighthouse-about.png)
-
----
-
 # Wireframes
 
-## Home Page Wireframe
 
-INSERT IMAGE HERE
+## Home,Activities, and about Pages Wireframe
 
-![Home Wireframe](docs/wireframes/home-wireframe.png)
+![Home,Activities, and about Pages Wireframe](assets/screenshots/pth-wireframe.png)
 
----
-
-## Activities Page Wireframe
-
-INSERT IMAGE HERE
-
-![Activities Wireframe](docs/wireframes/activities-wireframe.png)
-
----
-
-## About Page Wireframe
-
-INSERT IMAGE HERE
-
-![About Wireframe](docs/wireframes/about-wireframe.png)
-
----
 
 # Testing & Validation
 
@@ -316,7 +285,7 @@ INSERT IMAGE HERE
 
 ## Lighthouse Testing
 
-Lighthouse categories reviewed:
+Lighthouse was replaced with GTmetrix page speed testing to review:
 
 - Performance
 - Accessibility
@@ -405,7 +374,7 @@ AI tools were used during this educational project for:
 - Bootstrap optimisation
 - Git/GitHub troubleshooting
 
-All final implementation decisions were reviewed and applied manually.
+All final implementation decisions were reviewed and applied manually by Student H.A, ID number 516422.
 
 ---
 
