@@ -1,230 +1,451 @@
 # PlayTogether Hub
 
-PlayTogether Hub is a responsive front-end SaaS-style educational platform designed to support inclusive play activities for children aged 4–12.
+## Live Website
 
-The platform focuses on helping:
+https://call07564221643-code.github.io/PlayTogether-Hub/
 
-- Schools
-- Managed playgrounds
-- Parents
-- Caregivers
-- Youth workers
-- SEND professionals
+---
 
-deliver safer, more inclusive and confidence-building activities for children from different ethnicities, backgrounds and communication abilities.
+# Table of Contents
+
+1. Project Purpose
+2. User Experience (UX)
+3. Features
+4. Technologies Used
+5. Responsive Design
+6. Accessibility
+7. JavaScript Features
+8. Desktop Screenshots
+9. Mobile Screenshots
+10. Validation Screenshots
+11. Lighthouse Performance Tests
+12. Wireframes
+13. Testing & Validation
+14. Deployment Procedure
+15. GitHub Version Control
+16. Bugs & Fixes
+17. AI Usage Declaration
+18. Credits & Attributions
+19. Future Improvements
 
 ---
 
 # Project Purpose
 
-This project was created as:
+PlayTogether Hub is a responsive front-end educational SaaS-style platform designed to support inclusive play activities for children aged 4–12.
 
-- A front-end educational portfolio project
-- A responsive Bootstrap 5.3 SaaS-style website
-- A demonstration of:
-  - HTML5 structure
-  - CSS3 styling
-  - Bootstrap responsive layouts
-  - Accessibility
-  - UX/UI principles
-  - Inclusive design
-  - Hero section background systems
-  - JavaScript-generated cards
-  - Modal interactions
-  - Responsive navigation
-  - Component-based styling
+The platform supports:
+
+- Schools
+- Managed playgrounds
+- Parents
+- Caregivers
+- SEND professionals
+- Youth workers
+
+The project demonstrates responsive front-end development using:
+
+- HTML5
+- CSS3
+- Bootstrap 5.3
+- JavaScript
 
 ---
 
-# Main Features
+# User Experience (UX)
+
+The website was designed using modern UX/UI principles to ensure:
+
+- Clear navigation
+- Responsive layouts
+- Easy-to-read sections
+- Logical structure
+- Accessibility support
+- User-friendly interactions
+- Interactive feedback systems
+
+The navigation menu highlights the active page so users always know their current page location.
+
+---
+
+# Features
 
 ## Responsive Navigation
 
 - Sticky Bootstrap navbar
 - Mobile hamburger menu
-- Responsive layout across devices
+- Active page highlighting
+- Responsive layout
 
 ## Hero Background System
 
-The Home, Activities and About pages use:
-
-- Full-width responsive background heroes
-- Overlay readability layer
-- Centrally aligned content
-- SaaS-inspired visual structure
+- Full-width responsive hero sections
+- Readability overlay system
+- SaaS-style modern layout
 
 ## Activity Cards
 
-Cards include:
+- JavaScript-generated cards
+- Reusable card structure
+- Dynamic DOM rendering
+- Responsive Bootstrap grid
 
-- Age range
-- Group size
-- Activity duration
-- Sensory considerations
-- Anxiety awareness
-- Non-verbal participation support
-- Safeguarding notes
+## Popup Modal System
 
-## Safeguarding Focus
+- Bootstrap modal integration
+- Interactive “Open Card” buttons
+- Dynamic JavaScript content
 
-The project promotes:
+## Contact Form
 
-- Low-pressure participation
-- SEND awareness
-- Emotional regulation support
-- Safe stopping points
-- Inclusive communication styles
+- Bootstrap validation
+- JavaScript success feedback
+- Accessible labels and structure
 
-## Testimonials
+## Newsletter Signup
 
-Sample testimonials simulate MVP trust signals for future SaaS validation.
+- Front-end signup interaction
+- User feedback system
 
-## Google Maps Integration
+## Safeguarding Section
 
-Embedded location map for:
+Includes guidance for:
 
-Amberley Road  
-London  
-W9 2JH
-
-## Newsletter Form
-
-Responsive newsletter section included in footer.
+- Before activities
+- During activities
+- Adult awareness
+- After activities
 
 ---
 
 # Technologies Used
 
-## Front-End
+## Languages
 
 - HTML5
 - CSS3
-- JavaScript
-- Bootstrap v5.3.3
+- JavaScript (ES6)
+
+## Frameworks & Libraries
+
+- Bootstrap 5.3
+- Bootstrap Icons
+- Google Fonts
+
+## Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- GitHub Pages
+
+---
+
+# Responsive Design
+
+The website was designed mobile-first and tested across:
+
+- Mobile devices
+- Tablets
+- Desktop screens
+- Large displays
+
+Bootstrap responsive grid classes used include:
+
+```html
+container
+row
+col-md-6
+col-lg-4
+g-4
+```
+
+---
+
+# Accessibility
+
+Accessibility improvements include:
+
+- Semantic HTML structure
+- Skip-to-content link
+- Alt text for images
+- Keyboard-focus styling
+- Accessible forms
+- ARIA labels
+- Reduced motion support
+- Appropriate colour contrast
+
+Fonts used:
+
+- Nunito
+- Atkinson Hyperlegible
+
+---
+
+# JavaScript Features
+
+JavaScript is used to create:
+
+- Dynamic activity cards
+- Popup modal system
+- Contact form feedback
+- Newsletter interactions
+- Activity filtering
+- Interactive user actions
+
+---
+
+# Desktop Screenshots
+
+## Home Page — Desktop View
+
+![PlayTogether Hub home page desktop screenshot](assets/screenshots/pth-home-desktop.png)
+
+---
+
+## Activities Page — Desktop View
+![Activities Desktop Screenshot](assets/screenshots/pth-activities.png)
+---
+
+## About Page — Desktop View
+![About Desktop Screenshot](assets/screenshots/about-desktop.png)
+
+
+# Mobile Screenshots
+
+## Home Page — Mobile View
+
+![Home Mobile Screenshot](assets/screenshots/home-mobile.png)
+
+
+## Activities Page — Mobile View
+
+INSERT IMAGE HERE
+
+![Activities Mobile Screenshot](assets/screenshots/activities-mobile.png)
+
+---
+
+## About Page — Mobile View
+
+INSERT IMAGE HERE
+
+![About Mobile Screenshot](assets/screenshots/about-mobile.png)
+
+---
+
+# Validation Screenshots
+
+## W3C HTML Validation
+
+INSERT IMAGE HERE
+
+![HTML Validation Screenshot](assets/screenshots/html-validation.png)
+
+---
+
+## W3C CSS Validation
+
+INSERT IMAGE HERE
+
+![CSS Validation Screenshot](assets/screenshots/css-validation.png)
+
+---
+
+# Lighthouse Performance Tests
+
+## Home Page Lighthouse Test
+
+INSERT IMAGE HERE
+
+![Home Lighthouse Screenshot](assets/screenshots/lighthouse-home.png)
+
+---
+
+## Activities Page Lighthouse Test
+
+INSERT IMAGE HERE
+
+![Activities Lighthouse Screenshot](assets/screenshots/lighthouse-activities.png)
+
+---
+
+## About Page Lighthouse Test
+
+INSERT IMAGE HERE
+
+![About Lighthouse Screenshot](assets/screenshots/lighthouse-about.png)
+
+---
+
+# Wireframes
+
+## Home Page Wireframe
+
+INSERT IMAGE HERE
+
+![Home Wireframe](docs/wireframes/home-wireframe.png)
+
+---
+
+## Activities Page Wireframe
+
+INSERT IMAGE HERE
+
+![Activities Wireframe](docs/wireframes/activities-wireframe.png)
+
+---
+
+## About Page Wireframe
+
+INSERT IMAGE HERE
+
+![About Wireframe](docs/wireframes/about-wireframe.png)
+
+---
+
+# Testing & Validation
+
+## HTML Validation
+
+- W3C HTML validation completed
+
+## CSS Validation
+
+- W3C CSS validation completed
+
+## Lighthouse Testing
+
+Lighthouse categories reviewed:
+
+- Performance
+- Accessibility
+- Best Practices
+- SEO
+
+---
+
+# Deployment Procedure
+
+The project was deployed using GitHub Pages.
+
+## Deployment Steps
+
+1. Create GitHub repository
+2. Upload project files
+3. Push files using Git
+4. Open repository settings
+5. Open Pages section
+6. Select main branch
+7. Save deployment settings
+
+Live website:
+
+https://call07564221643-code.github.io/PlayTogether-Hub/
+
+---
+
+# GitHub Version Control
+
+Git and GitHub were used throughout development.
+
+Example commands used:
+
+```bash
+git add .
+git commit -m "Updated navbar styling"
+git push origin main
+```
+
+Clear commit history was maintained during development.
+
+---
+
+# Bugs & Fixes
+
+## Navbar Active State
+
+Issue:
+Active page was difficult to identify.
+
+Fix:
+Added responsive active-page styling and hover effects.
+
+---
+
+## About Page Card Alignment
+
+Issue:
+Safeguarding and information cards were misaligned.
+
+Fix:
+Added Bootstrap flex alignment and equal-height card structure.
+
+---
+
+## Git Merge Conflicts
+
+Issue:
+Push rejected because remote branch contained newer commits.
+
+Fix:
+Resolved merge conflicts and completed Git merge successfully.
+
+---
+
+# AI Usage Declaration
+
+AI tools were used during this educational project for:
+
+- Code explanations
+- Debugging support
+- UX/UI suggestions
+- README drafting
+- Accessibility improvements
+- Bootstrap optimisation
+- Git/GitHub troubleshooting
+
+All final implementation decisions were reviewed and applied manually.
+
+---
+
+# Credits & Attributions
+
+## Libraries & Frameworks
+
+- Bootstrap 5.3
+- Bootstrap Icons
+- Google Fonts
 
 ## Fonts
 
 - Nunito
 - Atkinson Hyperlegible
 
-## Icons
+## Hosting
 
-- Bootstrap Icons
+- GitHub Pages
 
 ---
 
-# Folder Structure
+# Future Improvements
 
-```text
-playtogether-hub/
-│
-├── index.html
-├── activities.html
-├── about.html
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── main.js
-│
-├── assets/
-│   ├── images/
-│   └── icons/
-│
-└── README.md
-Accessibility Features
-Skip-to-content link
-High readability typography
-Responsive scaling
-Accessible contrast ratios
-Keyboard-friendly navigation
-Large touch targets
-Mobile-first layout considerations
-UX/UI Design Decisions
-Colour Palette
+Planned future updates include:
 
-The colour palette uses:
+- Dark mode
+- Backend integration
+- User accounts
+- Search functionality
+- Database support
+- Activity bookmarking
+- Admin dashboard
+- Accessibility improvements
+- Multi-language support
 
-Soft blue
-Sky blue
-Warm yellow
-Pink highlights
-White space
+---
 
-to create:
+# Author
 
-Safety
-Warmth
-Positivity
-Child-friendly visual tone
-Card Hover Effects
-
-Cards use:
-
-transform: translateY(-8px);
-
-to provide visual feedback and improve engagement.
-
-Hero Overlay System
-
-Hero overlays improve text readability across all viewport sizes.
-
-Responsive Design
-
-The website is designed for:
-
-Desktop
-Tablet
-Mobile devices
-
-using Bootstrap’s responsive grid system and custom media queries.
-
-Future SaaS Expansion Ideas
-
-Potential future upgrades:
-
-User login system
-Saved activity profiles
-Dashboard analytics
-AI activity recommendations
-Activity filtering engine
-School subscription plans
-Parent accounts
-Staff safeguarding training modules
-Printable activity cards
-Progress tracking
-Local Development
-Clone Repository
-git clone https://github.com/call07564221643-code/PlayTogether-Hub.git
-Open Project
-
-Open:
-
-index.html
-
-inside a browser or VS Code Live Server.
-
-Git Commands
-Save Changes
-git add .
-git commit -m "Update project"
-git push origin main
-Deployment
-
-The project can be deployed using:
-
-GitHub Pages
-Netlify
-Vercel
-Shared hosting
-cPanel hosting
-Educational Disclaimer
-
-This project is an educational MVP front-end demonstration and does not currently provide live safeguarding supervision or professional therapy services.
-
-Author
-
-PlayTogether Hub
-Educational Front-End SaaS MVP Project
+PlayTogether Hub  
+Educational Front-End SaaS Project  
 2026
